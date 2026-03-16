@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
+site_theme               : "air" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
 title                    : "Nicola Scattarreggia"
 title_separator          : "-"
 name                     : &name "Nicola"
@@ -26,11 +26,11 @@ author:
   avatar           : "profile.png"
   name             : "Your Sidebar Name"
   pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
-  location         : "Earth"
-  employer         : "Red Brick University"
+  bio              : "Assistant Professor at Department of Structural and Geotechincal Engineering @ Sapienza University of Rome, Italy"
+  location         : "Rome"
+  employer         : "Sapienza University of Rome"
   uri              : # URL
-  email            : "none@example.org" 
+  email            : "nicola.scattarreggia@uniroma1.it" 
 
   # Academic websites
   academia         : # URL
