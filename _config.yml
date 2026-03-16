@@ -23,7 +23,7 @@ repository               : "academicpages/academicpages.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.jpg"
+  avatar           : "images/profile.jpg"
   name             : "Nicola Scattarreggia"
   pronouns         : # example: "she/her"  
   bio              : "Assistant Professor at Department of Structural and Geotechincal Engineering @ Sapienza University of Rome, Italy"
