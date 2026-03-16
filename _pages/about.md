@@ -1,15 +1,14 @@
 ---
 permalink: /
-title: "Academic Pages is a ready-to-fork GitHub Pages template for academic personal websites"
+title: ""
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the repository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. Incidentally, these same features make it a great template for anyone that needs to show off a professional template!
+Nicola Scattarreggia is an Assistant Professor (tenure-track) in Structural Engineering at Sapienza University of Rome. He obtained his Master’s degree in Civil Engineering from the University of Pavia and a PhD in Understanding and Managing Extremes from the ROSE School at the Scuola Universitaria Superiore IUSS Pavia, where he investigated the performance of reinforced concrete bridges subjected to both ordinary and extreme (e.g., earthquakes, impacts) loading. Throughout his doctoral studies, he collaborated extensively with G. M. Calvi and R. Pinho, and undertook a visiting research appointment at the University of California, Berkeley. His research focuses on structural assessment up to collapse, seismic risk assessment, advanced discrete element modeling, and retrofitting of structures. He has co-authored several international publications and received prestigious awards, including the 20 Years ReLUIS Award (2023) for an innovative and relevant project in structural engineering and the Best PhD Thesis Award (2024) from the International Association for Bridge and Structural Engineering (IABSE). He has contributed to various national and international research projects. Complementing his academic activities, he has been involved as a consulting engineer in high-profile projects, such as the forensic investigations on the collapse of the Morandi Bridge in Genoa, the structural assessment of the second ring of the San Siro Meazza Stadium in Milan, the structural analysis and retrofitting of a 70-year-old RC pier in southern Italy, and the structural analysis and retrofitting of the dome of the San Marco Cathedral in L’Aquila damaged during the 2009 earthquake sequence.
 
- You can fork [this template](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and Markdown files, add your own PDFs and other content, and have your own site for free, with no ads!
 
 A data-driven personal website
 ======
