@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-site_theme               : "air" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
+site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
 title                    : "Nicola Scattarreggia"
 title_separator          : "-"
 name                     : &name "Nicola"
@@ -44,7 +44,7 @@ author:
   pubmed           : # URL
   researchgate     : "https://www.researchgate.net/profile/Nicola-Scattarreggia"
   scopus           : # URL
-  linkedin         : "https://it.linkedin.com/in/nicolascattarreggia"
+  #linkedin         : "https://it.linkedin.com/in/nicolascattarreggia"
   
 
 
