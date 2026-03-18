@@ -1,64 +1,66 @@
 ---
-layout: archive
 title: "CV"
 permalink: /cv/
 author_profile: true
-redirect_from:
-  - /resume
+layout: archive
 ---
 
-{% include base_path %}
+# Curriculum Vitae
 
-Education
-======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+<div class="cv-download">
+  <a class="btn btn--primary" href="/files/CV_Nicola_Scattarreggia.pdf" target="_blank">Download CV (PDF)</a>
+</div>
 
-Work experience
-======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+{% include cv-nav.html %}
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+<div class="cv-wrapper">
 
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+  {% assign current_items = site.data.cv.current %}
+  {% include cv-section.html
+    section_id="current"
+    section_title="Current"
+    items=current_items
+    open=true
+  %}
 
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+  {% assign past_items = site.data.cv.past %}
+  {% include cv-section.html
+    section_id="past"
+    section_title="Past"
+    items=past_items
+    open=false
+  %}
+
+  {% assign education_items = site.data.cv.education %}
+  {% include cv-section.html
+    section_id="education"
+    section_title="Education"
+    items=education_items
+    open=false
+  %}
+
+  {% assign honours_items = site.data.cv.honours %}
+  {% include cv-section.html
+    section_id="honours"
+    section_title="Honours"
+    items=honours_items
+    open=false
+  %}
+
+  {% assign editorial_items = site.data.cv.editorial %}
+  {% include cv-section.html
+    section_id="editorial"
+    section_title="Editorial"
+    items=editorial_items
+    open=false
+  %}
+
+  {% assign qualifications_items = site.data.cv.qualifications %}
+  {% include cv-section.html
+    section_id="qualifications"
+    section_title="Qualifications"
+    items=qualifications_items
+    open=false
+  %}
+
+</div>
