@@ -41,3 +41,114 @@
     "vendor/font-awesome/solid",
     "vendor/font-awesome/brands"
 ;
+.cv-download {
+  text-align: right;
+  margin: 1rem 0 2rem 0;
+}
+
+.cv-download .btn {
+  border-radius: 14px;
+  padding: 0.7rem 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.cv-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1.5rem 0 2rem 0;
+  padding-bottom: 0.5rem;
+}
+
+.cv-nav a {
+  text-decoration: none;
+  border-bottom: 1px dotted #999;
+  color: inherit;
+}
+
+.cv-section {
+  margin-bottom: 1.5rem;
+  scroll-margin-top: 90px;
+}
+
+.cv-section details {
+  border-left: 4px solid #4aa3df;
+  background: #f8f9fb;
+  border-radius: 16px;
+  padding: 0.8rem 1rem 1rem 1rem;
+}
+
+.cv-section summary {
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.2rem;
+  list-style: none;
+  background: #eef1f5;
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.cv-section summary::-webkit-details-marker {
+  display: none;
+}
+
+.cv-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.cv-item:last-child {
+  border-bottom: none;
+}
+
+.cv-item-main {
+  flex: 1 1 auto;
+}
+
+.cv-item-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.cv-item-subtitle {
+  margin-top: 0.25rem;
+  font-size: 1rem;
+}
+
+.cv-item-description {
+  margin-top: 0.45rem;
+}
+
+.cv-item-details {
+  margin-top: 0.5rem;
+}
+
+.cv-item-date {
+  min-width: 170px;
+  text-align: right;
+  color: #666;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .cv-item {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .cv-item-date {
+    text-align: left;
+    min-width: auto;
+  }
+
+  .cv-download {
+    text-align: left;
+  }
+}
+
