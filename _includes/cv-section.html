@@ -1,0 +1,41 @@
+<section id="{{ include.section_id }}" class="cv-section">
+  <details {% if include.open %}open{% endif %}>
+    <summary>{{ include.section_title }}</summary>
+
+    <div class="cv-section-body">
+      {% for item in include.items %}
+        <div class="cv-item">
+          <div class="cv-item-main">
+            <div class="cv-item-title">{{ item.title }}</div>
+
+            {% if item.subtitle %}
+              <div class="cv-item-subtitle">
+                {% if item.url %}
+                  <a href="{{ item.url }}" target="_blank">{{ item.subtitle }}</a>
+                {% else %}
+                  {{ item.subtitle }}
+                {% endif %}
+              </div>
+            {% endif %}
+
+            {% if item.description %}
+              <div class="cv-item-description">{{ item.description }}</div>
+            {% endif %}
+
+            {% if item.details %}
+              <ul class="cv-item-details">
+                {% for detail in item.details %}
+                  <li>{{ detail }}</li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </div>
+
+          {% if item.date %}
+            <div class="cv-item-date">{{ item.date }}</div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </details>
+</section>
