@@ -10,7 +10,7 @@
 
     "themes",
     "theme/{{ site.site_theme | default: 'default' | append: '_light' }}",
-     #"theme/{{ site.site_theme | default: 'default' | append: '_dark' }}",
+    "theme/{{ site.site_theme | default: 'default' | append: '_dark' }}",
 
     "include/mixins",
     "vendor/susy/susy",
@@ -182,4 +182,16 @@
   .cv-download {
     text-align: left;
   }
+}
+/* ===== REMOVE DARK MODE TOGGLE ===== */
+.dark-mode-toggle {
+  display: none !important;
+}
+
+.theme-toggle {
+  display: none !important;
+}
+
+button[title*="Dark"] {
+  display: none !important;
 }
