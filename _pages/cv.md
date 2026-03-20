@@ -18,7 +18,7 @@ layout: archive
   {% assign current_items = site.data.cv.current %}
   {% include cv-section.html
     section_id="current"
-    section_title="Current"
+    section_title="Current Appointments"
     items=current_items
     open=true
   %}
@@ -26,7 +26,7 @@ layout: archive
   {% assign past_items = site.data.cv.past %}
   {% include cv-section.html
     section_id="past"
-    section_title="Past"
+    section_title="Past Appointments"
     items=past_items
     open=false
   %}
@@ -42,7 +42,7 @@ layout: archive
   {% assign honours_items = site.data.cv.honours %}
   {% include cv-section.html
     section_id="honours"
-    section_title="Honours"
+    section_title="Honours and Awards"
     items=honours_items
     open=false
   %}
