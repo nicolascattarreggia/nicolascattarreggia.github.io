@@ -5,8 +5,6 @@ author_profile: true
 layout: archive
 ---
 
-# Curriculum Vitae
-
 <div class="cv-download">
   <a class="btn btn--primary" href="/files/CV_Nicola_Scattarreggia.pdf" target="_blank">Download CV (PDF)</a>
 </div>
