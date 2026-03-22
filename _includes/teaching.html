@@ -1,0 +1,115 @@
+---
+layout: default
+title: Teaching
+permalink: /teaching/
+---
+
+{% assign teaching_years = site.data.teaching %}
+
+<style>
+  .archive {
+    width: 80%;
+    margin: 0 auto;
+    float: none;
+    padding-right: 0;
+  }
+
+  @media (min-width: 80em) {
+    .archive {
+      width: 70%;
+    }
+  }
+
+  .teaching-container {
+    margin-top: 2rem;
+  }
+
+  .teaching-block {
+    background: #f3f4f6;
+    border-left: 3px solid #8b2332;
+    border-radius: 14px;
+    margin-bottom: 1.2rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .teaching-block summary {
+    list-style: none;
+    cursor: pointer;
+    font-size: 1.4rem;
+    font-weight: 700;
+    padding: 0.8rem 1rem;
+    background: #e5e7eb;
+    border-radius: 10px;
+    color: #444;
+  }
+
+  .teaching-block summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .teaching-block[open] summary {
+    margin-bottom: 0.8rem;
+  }
+
+  .teaching-course {
+    padding: 0.8rem 1rem 1.2rem 1rem;
+    border-top: 1px solid #ddd;
+  }
+
+  .teaching-course:first-of-type {
+    border-top: none;
+  }
+
+  .teaching-course-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #444;
+    margin-bottom: 0.2rem;
+  }
+
+  .teaching-course-subtitle {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 0.25rem;
+  }
+
+  .teaching-course-role {
+    font-size: 0.98rem;
+    color: #555;
+    margin-bottom: 0.25rem;
+  }
+
+  .teaching-course-description {
+    font-size: 0.98rem;
+    color: #555;
+    line-height: 1.5;
+  }
+</style>
+
+<div class="teaching-container">
+  <h1>Teaching</h1>
+
+  {% for year in teaching_years %}
+    <details class="teaching-block">
+      <summary>{{ year.academic_year }}</summary>
+
+      {% for item in year.courses %}
+        <div class="teaching-course">
+          <div class="teaching-course-title">{{ item.course }}</div>
+
+          {% if item.institution %}
+            <div class="teaching-course-subtitle">{{ item.institution }}</div>
+          {% endif %}
+
+          {% if item.role %}
+            <div class="teaching-course-role"><strong>Role:</strong> {{ item.role }}</div>
+          {% endif %}
+
+          {% if item.description %}
+            <div class="teaching-course-description">{{ item.description }}</div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </details>
+  {% endfor %}
+</div>
