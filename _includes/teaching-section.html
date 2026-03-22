@@ -3,28 +3,27 @@
 <details class="teaching-year-block" open>
   <summary class="teaching-year-summary">
     <span class="teaching-year-title">Academic Year {{ section.academic_year }}</span>
-    <span class="teaching-year-count">{{ section.courses | size }}</span>
   </summary>
 
-  <div class="teaching-courses-wrap">
+  <div class="teaching-year-content">
     {% for item in section.courses %}
-      <div class="teaching-course-card">
-        <div class="teaching-course-top">
-          <div class="teaching-course-main">
-            <div class="teaching-course-title">{{ item.course }}</div>
+      <div class="teaching-item-row{% unless forloop.last %} teaching-item-row-bordered{% endunless %}">
+        <div class="teaching-item-top">
+          <div class="teaching-item-main">
+            <div class="teaching-item-title">{{ item.course }}</div>
           </div>
 
-          <div class="teaching-course-badges">
+          <div class="teaching-item-badges">
             {% if item.role %}
-              <span class="teaching-badge teaching-badge-dark">{{ item.role }}</span>
+              <span class="teaching-badge teaching-badge-role">{{ item.role }}</span>
             {% endif %}
             {% if item.hours %}
-              <span class="teaching-badge teaching-badge-light">{{ item.hours }}</span>
+              <span class="teaching-badge teaching-badge-hours">{{ item.hours }}</span>
             {% endif %}
           </div>
         </div>
 
-        <div class="teaching-course-grid">
+        <div class="teaching-item-grid">
           {% if item.period %}
             <div class="teaching-label">Period</div>
             <div class="teaching-value">{{ item.period }}</div>
