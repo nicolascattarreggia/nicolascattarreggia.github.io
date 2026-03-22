@@ -1,6 +1,6 @@
 {% assign section = include.section %}
 
-<details class="teaching-year-block" open>
+<details class="teaching-year-block"{% if include.is_first %} open{% endif %}>
   <summary class="teaching-year-summary">
     <span class="teaching-year-title">Academic Year {{ section.academic_year }}</span>
   </summary>
