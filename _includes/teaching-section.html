@@ -1,42 +1,48 @@
 {% assign section = include.section %}
 
-<details class="cv-section-block" style="margin-bottom: 1.2rem;" open>
-  <summary style="cursor:pointer; font-size:1.2rem; font-weight:700; color:#4a4a4a; background:#e9ebef; border-left:3px solid #8d2332; border-radius:14px; padding:0.8rem 1rem;">
-    {{ section.academic_year }}
+<details class="teaching-year-block" open>
+  <summary class="teaching-year-summary">
+    <span class="teaching-year-title">Academic Year {{ section.academic_year }}</span>
+    <span class="teaching-year-count">{{ section.courses | size }}</span>
   </summary>
 
-  <div style="background:#f3f4f6; border-left:3px solid #8d2332; border-radius:14px; margin-top:0.5rem; padding:1rem 1rem 0.5rem 1rem;">
+  <div class="teaching-courses-wrap">
     {% for item in section.courses %}
-      <div style="padding: 0.8rem 0 1rem 0; border-bottom: 1px solid #ddd;">
-        <div style="display:flex; justify-content:space-between; gap:1rem; align-items:flex-start;">
-          <div>
-            <div style="font-size:1.05rem; font-weight:700; color:#4a4a4a;">
-              {{ item.course }}
-            </div>
-
-            {% if item.institution %}
-              <div style="font-size:1rem; color:#666;">
-                {{ item.institution }}
-              </div>
-            {% endif %}
-
-            {% if item.role %}
-              <div style="font-size:1rem; color:#666;">
-                {{ item.role }}
-              </div>
-            {% endif %}
-
-            {% if item.description %}
-              <div style="font-size:1rem; color:#666; margin-top:0.2rem;">
-                {{ item.description }}
-              </div>
-            {% endif %}
+      <div class="teaching-course-card">
+        <div class="teaching-course-top">
+          <div class="teaching-course-main">
+            <div class="teaching-course-title">{{ item.course }}</div>
           </div>
 
+          <div class="teaching-course-badges">
+            {% if item.role %}
+              <span class="teaching-badge teaching-badge-dark">{{ item.role }}</span>
+            {% endif %}
+            {% if item.hours %}
+              <span class="teaching-badge teaching-badge-light">{{ item.hours }}</span>
+            {% endif %}
+          </div>
+        </div>
+
+        <div class="teaching-course-grid">
           {% if item.period %}
-            <div style="white-space:nowrap; font-size:1rem; color:#777;">
-              {{ item.period }}
-            </div>
+            <div class="teaching-label">Period</div>
+            <div class="teaching-value">{{ item.period }}</div>
+          {% endif %}
+
+          {% if item.programme %}
+            <div class="teaching-label">Programme</div>
+            <div class="teaching-value">{{ item.programme }}</div>
+          {% endif %}
+
+          {% if item.institution %}
+            <div class="teaching-label">Institutes</div>
+            <div class="teaching-value">{{ item.institution }}</div>
+          {% endif %}
+
+          {% if item.description %}
+            <div class="teaching-label">Description</div>
+            <div class="teaching-value">{{ item.description }}</div>
           {% endif %}
         </div>
       </div>
