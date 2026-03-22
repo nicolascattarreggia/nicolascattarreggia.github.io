@@ -1,21 +1,30 @@
+
+- academic_year: "2025/2026"
+  courses:
+   
+    - course: "Structural Safety Engineering"
+      institution: "Sapienza University of Rome, Rome (IT)"
+      role: ""
+      description: "Safety and Civil Protection Engineering"
+      period: "2025/2026"
+    
+    - course: "Introduction to Discrete Element Approaches for Structural Analysis"
+      institution: "ROSE School, IUSS Pavia (IT)"
+      role: ""
+      description: "PhD course in Earthquake Engineering."
+      period: "February 2026"
+
+
 - academic_year: "2024/2025"
   courses:
     - course: "Introduction to Discrete Element Approaches for Structural Analysis"
       institution: "ROSE School, IUSS Pavia (IT)"
-      role: "Lecturer"
+      role: ""
       description: "PhD course in Earthquake Engineering."
-      period: "2024/2025"
+      period: "January 2025"
 
     - course: "Laboratorio di tecnica delle costruzioni - modulo progetto di strutture in c.a."
       institution: "University of Pavia, Pavia (IT)"
       role: ""
       description: "Corso di laurea in Ingegneria Edile-Architettura"
       period: "2024/2025"
-
-- academic_year: "2023/2024"
-  courses:
-    - course: "Example course"
-      institution: "Example institution"
-      role: "Lecturer"
-      description: "Example description."
-      period: "2023/2024"
