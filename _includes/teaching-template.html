@@ -1,0 +1,11 @@
+{% assign teaching_data = site.data.teaching %}
+
+<div class="cv-container">
+  <h1>Teaching</h1>
+
+  <div class="cv-content">
+    {% for section in teaching_data %}
+      {% include teaching-section.html section=section %}
+    {% endfor %}
+  </div>
+</div>
