@@ -25,9 +25,6 @@
     border-left: 3px solid #8d2332;
     border-radius: 18px;
     padding: 1rem 1.1rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     color: #2f3445;
     font-weight: 700;
     font-size: 1.15rem;
@@ -44,61 +41,49 @@
   }
 
   .teaching-year-title::before {
-    content: "⌄";
-    font-size: 1.4rem;
-    line-height: 1;
+    content: "▶";
+    font-size: 1rem;
     color: #4b5563;
-    transform: rotate(-90deg);
     transition: transform 0.2s ease;
+    display: inline-block;
   }
 
   details[open] > .teaching-year-summary .teaching-year-title::before {
-    transform: rotate(0deg);
+    transform: rotate(90deg);
   }
 
-  .teaching-year-count {
-    min-width: 2rem;
-    height: 2rem;
-    border-radius: 999px;
-    background: #4da3e6;
-    color: white;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1rem;
-    font-weight: 700;
-    padding: 0 0.5rem;
-    box-shadow: 0 0 0 3px rgba(255,255,255,0.6);
-  }
-
-  .teaching-courses-wrap {
-    margin-top: 1rem;
-  }
-
-  .teaching-course-card {
+  .teaching-year-content {
     background: #f3f4f6;
     border-left: 3px solid #8d2332;
     border-radius: 24px;
-    padding: 1.5rem;
-    margin-bottom: 1rem;
+    margin-top: 0.8rem;
+    padding: 1rem 1.2rem;
   }
 
-  .teaching-course-top {
+  .teaching-item-row {
+    padding: 0.9rem 0;
+  }
+
+  .teaching-item-row-bordered {
+    border-bottom: 1px solid #d8dbe2;
+  }
+
+  .teaching-item-top {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     gap: 1rem;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1rem;
   }
 
-  .teaching-course-title {
+  .teaching-item-title {
     font-size: 1.15rem;
     font-weight: 700;
     color: #4a4a4a;
     line-height: 1.3;
   }
 
-  .teaching-course-badges {
+  .teaching-item-badges {
     display: flex;
     gap: 0.5rem;
     flex-wrap: wrap;
@@ -114,20 +99,20 @@
     white-space: nowrap;
   }
 
-  .teaching-badge-dark {
-    background: #111111;
+  .teaching-badge-role {
+    background: #8d2332;
     color: #ffffff;
   }
 
-  .teaching-badge-light {
+  .teaching-badge-hours {
     background: #e9ebef;
     color: #2f3445;
   }
 
-  .teaching-course-grid {
+  .teaching-item-grid {
     display: grid;
     grid-template-columns: 130px 1fr;
-    row-gap: 1rem;
+    row-gap: 0.9rem;
     column-gap: 1.4rem;
   }
 
@@ -144,15 +129,15 @@
   }
 
   @media (max-width: 768px) {
-    .teaching-course-top {
+    .teaching-item-top {
       flex-direction: column;
     }
 
-    .teaching-course-badges {
+    .teaching-item-badges {
       justify-content: flex-start;
     }
 
-    .teaching-course-grid {
+    .teaching-item-grid {
       grid-template-columns: 1fr;
       row-gap: 0.35rem;
     }
