@@ -1,19 +1,27 @@
 ---
+layout: archive
 title: "Teaching"
 permalink: /teaching/
 author_profile: true
-layout: archive
 ---
 
-{% include teaching-nav.html %}
+{% assign teaching_years = site.data.teaching %}
 
-<div class="teaching-wrapper">
+<div class="teaching-container">
 
-  {% assign teaching_items = site.data.teaching.2025-2026 %}
-  {% include teaching-section.html
-    section_id="2025-2026"
-    section_title="2025-2026"
-    items=teaching_items
-    open=true
-  %}
+  {% for year in teaching_years %}
+    <details class="teaching-block">
+      <summary>{{ year.academic_year }}</summary>
 
+      {% for item in year.courses %}
+        <div class="teaching-course">
+          <strong>{{ item.course }}</strong><br>
+          {{ item.institution }}<br>
+          {{ item.role }}<br>
+          {{ item.description }}
+        </div>
+      {% endfor %}
+    </details>
+  {% endfor %}
+
+</div>
