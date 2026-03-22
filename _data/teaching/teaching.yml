@@ -1,0 +1,13 @@
+- academic_year: "2024/2025"
+  courses:
+    - course: "Introduction to Discrete Element Approaches for Structural Analysis"
+      institution: "ROSE School, IUSS Pavia"
+      role: ""
+      description: "PhD course in Earthquake Engineering."
+
+    - course: "Laboratorio di tecnica delle costruzioni"
+      institution: "Università di Pavia"
+      role: ""
+      description: "Laurea in Ingegneria Edile-Architettura"
+
+  
