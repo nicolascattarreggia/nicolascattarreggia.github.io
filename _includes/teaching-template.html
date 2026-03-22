@@ -156,7 +156,7 @@
 <div class="cv-container">
   <div class="cv-content">
     {% for section in teaching_data %}
-      {% include teaching-section.html section=section %}
+      {% include teaching-section.html section=section is_first=forloop.first %}
     {% endfor %}
   </div>
 </div>
