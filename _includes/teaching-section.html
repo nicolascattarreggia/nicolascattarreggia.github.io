@@ -1,46 +1,34 @@
 {% assign section = include.section %}
 
-<details class="cv-section-block" id="{{ section.academic_year | slugify }}" style="margin-bottom: 1.2rem;" open>
-  <summary style="list-style:none; cursor:pointer;">
-    <div style="background:#e9ebef; border-left:3px solid #8d2332; border-radius:14px; padding:0.6rem 1rem; font-size:1.2rem; font-weight:700; color:#4a4a4a;">
-      {{ section.academic_year }}
-    </div>
+<details class="cv-section-block" style="margin-bottom: 1.2rem;">
+  <summary style="cursor:pointer; font-size:1.2rem; font-weight:700; color:#4a4a4a; background:#e9ebef; border-left:3px solid #8d2332; border-radius:14px; padding:0.8rem 1rem;">
+    {{ section.academic_year }}
   </summary>
 
-  <div style="background:#f3f4f6; border-left:3px solid #8d2332; border-radius:14px; margin-top:0.5rem; padding:1rem 1rem 0.5rem 1rem;">
+  <div style="background:#f3f4f6; border-left:3px solid #8d2332; border-radius:14px; margin-top:0.5rem; padding:1rem;">
     {% for item in section.courses %}
-      <div style="padding: 0.8rem 0 1rem 0; border-bottom: 1px solid #ddd;">
-        <div style="display:flex; justify-content:space-between; gap:1rem; align-items:flex-start;">
-          <div>
-            <div style="font-size:1.05rem; font-weight:700; color:#4a4a4a;">
-              {{ item.course }}
-            </div>
-
-            {% if item.institution %}
-              <div style="font-size:1rem; color:#666;">
-                {{ item.institution }}
-              </div>
-            {% endif %}
-
-            {% if item.role %}
-              <div style="font-size:1rem; color:#666;">
-                {{ item.role }}
-              </div>
-            {% endif %}
-
-            {% if item.description %}
-              <div style="font-size:1rem; color:#666; margin-top:0.2rem;">
-                {{ item.description }}
-              </div>
-            {% endif %}
-          </div>
-
-          {% if item.period %}
-            <div style="white-space:nowrap; font-size:1rem; color:#777;">
-              {{ item.period }}
-            </div>
-          {% endif %}
+      <div style="padding: 0.8rem 0; border-bottom: 1px solid #ddd;">
+        <div style="font-size:1.05rem; font-weight:700; color:#4a4a4a;">
+          {{ item.course }}
         </div>
+
+        {% if item.institution %}
+          <div style="font-size:1rem; color:#666;">
+            {{ item.institution }}
+          </div>
+        {% endif %}
+
+        {% if item.role %}
+          <div style="font-size:1rem; color:#666;">
+            {{ item.role }}
+          </div>
+        {% endif %}
+
+        {% if item.description %}
+          <div style="font-size:1rem; color:#666; margin-top:0.2rem;">
+            {{ item.description }}
+          </div>
+        {% endif %}
       </div>
     {% endfor %}
   </div>
