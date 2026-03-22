@@ -1,0 +1,9 @@
+{% assign sections = include.data %}
+
+<div class="cv-nav" style="margin-bottom: 1.5rem;">
+  {% for section in sections %}
+    <a href="#{{ section.academic_year | slugify }}" style="margin-right:1rem; text-decoration:none; border-bottom:1px dotted #999; color:#555;">
+      {{ section.academic_year }}
+    </a>
+  {% endfor %}
+</div>
