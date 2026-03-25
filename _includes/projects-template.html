@@ -1,0 +1,179 @@
+{% assign projects = site.data.projects %}
+
+<style>
+  .archive {
+    width: 80%;
+    margin: 0 auto;
+    float: none;
+    padding-right: 0;
+  }
+
+  @media (min-width: 80em) {
+    .archive {
+      width: 70%;
+    }
+  }
+
+  .projects-container {
+    margin-top: 0.5rem;
+  }
+
+  .projects-title {
+    margin-bottom: 1.5rem;
+  }
+
+  .project-card {
+    background: #f8f9fa;
+    border: 1px solid #e5e7eb;
+    border-radius: 24px;
+    padding: 1.6rem 1.8rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+  }
+
+  .project-grid {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    column-gap: 1.6rem;
+    align-items: center;
+  }
+
+  .project-logo-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .project-logo {
+    max-width: 140px;
+    max-height: 110px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .project-badge {
+    display: inline-block;
+    background: #111111;
+    color: #ffffff;
+    border-radius: 14px;
+    padding: 0.25rem 0.8rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0.7rem;
+  }
+
+  .project-name {
+    font-size: 1.15rem;
+    font-weight: 700;
+    line-height: 1.35;
+    margin-bottom: 0.8rem;
+  }
+
+  .project-name a {
+    color: #6ea7c5;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+  }
+
+  .project-meta {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    row-gap: 0.45rem;
+    column-gap: 0.6rem;
+    margin-bottom: 0.9rem;
+  }
+
+  .project-label {
+    color: #7a7a7a;
+    font-size: 0.95rem;
+  }
+
+  .project-value {
+    color: #4a4a4a;
+    font-size: 0.98rem;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+
+  .project-description {
+    color: #4f5560;
+    font-size: 0.98rem;
+    line-height: 1.55;
+  }
+
+  @media (max-width: 900px) {
+    .project-grid {
+      grid-template-columns: 1fr;
+      row-gap: 1rem;
+      align-items: start;
+    }
+
+    .project-logo-wrap {
+      justify-content: flex-start;
+    }
+  }
+</style>
+
+<div class="projects-container">
+  <h1 class="projects-title">Current Projects</h1>
+
+  {% for project in projects %}
+    {% if project.status == "current" %}
+    <div class="project-card">
+      <div class="project-grid">
+        <div class="project-logo-wrap">
+          {% if project.logo %}
+            <img src="{{ project.logo | relative_url }}" alt="{{ project.short_name }} logo" class="project-logo">
+          {% endif %}
+        </div>
+
+        <div class="project-content">
+          {% if project.short_name %}
+            <div class="project-badge">{{ project.short_name }}</div>
+          {% endif %}
+
+          <div class="project-name">
+            {% if project.url %}
+              <a href="{{ project.url }}" target="_blank">{{ project.title }}</a>
+            {% else %}
+              {{ project.title }}
+            {% endif %}
+          </div>
+
+          <div class="project-meta">
+            {% if project.period %}
+              <div class="project-label">Period</div>
+              <div class="project-value">{{ project.period }}</div>
+            {% endif %}
+
+            {% if project.role %}
+              <div class="project-label">Role</div>
+              <div class="project-value">{{ project.role }}</div>
+            {% endif %}
+
+            {% if project.funding %}
+              <div class="project-label">Funding</div>
+              <div class="project-value">
+                {% if project.funding_url %}
+                  <a href="{{ project.funding_url }}" target="_blank">{{ project.funding }}</a>
+                {% else %}
+                  {{ project.funding }}
+                {% endif %}
+              </div>
+            {% endif %}
+          </div>
+
+          {% if project.description %}
+            <div class="project-description">
+              {{ project.description }}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endif %}
+  {% endfor %}
+</div>
