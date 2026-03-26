@@ -22,14 +22,19 @@
     margin-bottom: 1.5rem;
   }
 
-  /* 🔴 BOX stile Sapienza */
+  /* 🔴 CARD stile Sapienza elegante */
   .project-card {
     background: #f8f9fa;
     border: 2px solid #8d2332;
     border-radius: 20px;
     padding: 1.5rem 1.7rem;
     margin-bottom: 1.5rem;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+    transition: all 0.2s ease;
+  }
+
+  .project-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.06);
   }
 
   .project-grid {
@@ -51,19 +56,19 @@
     object-fit: contain;
   }
 
-  /* 🔴 BADGE rosso Sapienza */
+  /* 🔴 BADGE Sapienza */
   .project-badge {
     display: inline-block;
     background: #8d2332;
     color: #ffffff;
     border-radius: 14px;
     padding: 0.25rem 0.8rem;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     font-weight: 700;
-    margin-bottom: 0.7rem;
+    margin-bottom: 0.6rem;
   }
 
-  /* 🔴 TITOLO nero (no blu) */
+  /* 🔴 TITOLO */
   .project-name {
     font-size: 1.15rem;
     font-weight: 700;
@@ -74,47 +79,50 @@
   .project-name a {
     color: #000000;
     text-decoration: none;
-    font-weight: 700;
   }
 
   .project-name a:hover {
     text-decoration: underline;
   }
 
+  /* 🔹 META */
   .project-meta {
     display: grid;
     grid-template-columns: 90px 1fr;
-    row-gap: 0.45rem;
+    row-gap: 0.4rem;
     column-gap: 0.6rem;
     margin-bottom: 0.9rem;
   }
 
   .project-label {
     color: #7a7a7a;
-    font-size: 0.95rem;
+    font-size: 0.93rem;
   }
 
   .project-value {
     color: #4a4a4a;
-    font-size: 0.98rem;
-    font-weight: 600;
+    font-size: 0.96rem;
+    font-weight: 500;
     line-height: 1.35;
   }
 
+  /* 🔗 LINK stile paper */
   .project-value a {
-    color: #8d2332;
+    color: #000;
     text-decoration: none;
-    font-weight: 600;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s ease;
   }
 
   .project-value a:hover {
-    text-decoration: underline;
+    border-bottom: 1px solid #000;
   }
 
+  /* 🔹 DESCRIPTION */
   .project-description {
     color: #4f5560;
-    font-size: 0.98rem;
-    line-height: 1.55;
+    font-size: 0.96rem;
+    line-height: 1.5;
   }
 
   @media (max-width: 900px) {
@@ -175,7 +183,9 @@
               <div class="project-label">Funding</div>
               <div class="project-value">
                 {% if project.funding_url %}
-                  <a href="{{ project.funding_url }}" target="_blank">{{ project.funding }}</a>
+                  <a href="{{ project.funding_url }}" target="_blank">
+                    {{ project.funding }}
+                  </a>
                 {% else %}
                   {{ project.funding }}
                 {% endif %}
