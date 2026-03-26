@@ -196,37 +196,35 @@ button[title*="Dark"] {
   display: none !important;
 }
 
-/* ===== HEADER (TOP BAR SAPienza STYLE) ===== */
+/* ===== HEADER FULL SAPienza ===== */
 
-/* 🔴 Sfondo top bar */
-.masthead {
+/* 🔴 Sfondo completo */
+.masthead,
+.masthead__inner-wrap,
+.greedy-nav {
   background-color: #8d2332 !important;
 }
 
-/* 🔴 Nome (sinistra) */
-.site-title {
-  color: #ffffff !important;
-  font-weight: 700;
+/* 🔴 Rimuove box bianco interno */
+.masthead__inner-wrap {
+  background: transparent !important;
+  border-bottom: none !important;
 }
 
-/* 🔴 Menu (CV, Teaching, Projects) */
-.site-nav .page-link {
+/* 🔴 Testo */
+.site-title,
+.greedy-nav a,
+.greedy-nav .visible-links a {
   color: #ffffff !important;
-  font-weight: 500;
 }
 
 /* 🔴 Hover */
-.site-nav .page-link:hover {
-  color: #f2d6da !important; /* rosa chiaro Sapienza */
+.greedy-nav a:hover {
+  color: #f2d6da !important;
 }
 
 /* 🔴 Pagina attiva */
-.site-nav .page-link.current {
-  color: #ffffff !important;
-  border-bottom: 2px solid #ffffff;
-}
-
-/* 🔴 Linea sotto header (se presente) */
-.masthead__inner-wrap {
-  border-bottom: none !important;
+.greedy-nav .active a,
+.greedy-nav a.current {
+  border-bottom: 2px solid #ffffff !important;
 }
