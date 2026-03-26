@@ -107,16 +107,17 @@
   }
 
   /* 🔗 LINK stile paper */
-  .project-value a {
-    color: #000;
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: border-color 0.15s ease;
+ .project-value a {
+  color: inherit;        /* prende lo stesso colore del testo */
+  font-weight: inherit;  /* prende lo stesso grassetto */
+  text-decoration: none;
+  border-bottom: none;
   }
 
-  .project-value a:hover {
-    border-bottom: 1px solid #000;
-  }
+ #.project-value a:hover {
+ # text-decoration: underline; /* opzionale */
+ #}
+
 
   /* 🔹 DESCRIPTION */
   .project-description {
