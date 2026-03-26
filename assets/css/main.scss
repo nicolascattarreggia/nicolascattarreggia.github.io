@@ -68,7 +68,11 @@
   font-size: 0.9rem;
   text-decoration: none;
   border-bottom: 1px dotted #999;
-  color: inherit;
+  color: #4a4a4a !important;
+}
+
+.cv-nav a:hover {
+  color: #4a4a4a !important;
 }
 
 /* SECTIONS */
@@ -183,15 +187,10 @@
     text-align: left;
   }
 }
+
 /* ===== REMOVE DARK MODE TOGGLE ===== */
-.dark-mode-toggle {
-  display: none !important;
-}
-
-.theme-toggle {
-  display: none !important;
-}
-
+.dark-mode-toggle,
+.theme-toggle,
 button[title*="Dark"] {
   display: none !important;
 }
@@ -217,7 +216,6 @@ body {
 .archive__item,
 .sidebar,
 .sidebar__right,
-.masthead,
 .page__footer,
 .site-footer {
   background-color: #ffffff !important;
@@ -236,16 +234,8 @@ body,
 /* link generali nel contenuto */
 .page__content a,
 .archive a,
-.sidebar a,
 .site-footer a {
   color: #8d2332;
-}
-
-/* nasconde comunque i toggle dark mode */
-.dark-mode-toggle,
-.theme-toggle,
-button[title*="Dark"] {
-  display: none !important;
 }
 
 /* ===== FULL SAPienza TOP BAR ===== */
@@ -263,7 +253,7 @@ button[title*="Dark"] {
   border: 0 !important;
 }
 
-/* rimuove eventuali box/overlay bianchi del tema */
+/* rimuove eventuali box/overlay */
 .masthead__inner-wrap,
 .greedy-nav,
 .greedy-nav .visible-links,
@@ -286,7 +276,6 @@ button[title*="Dark"] {
 /* testi bianchi nella top bar */
 .site-title,
 .site-title:visited,
-.site-title:hover,
 .greedy-nav a,
 .greedy-nav a:visited,
 .greedy-nav .visible-links a,
@@ -294,13 +283,13 @@ button[title*="Dark"] {
   color: #ffffff !important;
 }
 
-/* hover */
+/* hover top bar */
 .greedy-nav a:hover,
 .site-title:hover {
   color: #f3d9dd !important;
 }
 
-/* voce attiva */
+/* voce attiva top bar */
 .greedy-nav .visible-links .active a,
 .greedy-nav a.current {
   color: #ffffff !important;
@@ -341,7 +330,6 @@ button[title*="Dark"] {
 
   .page__content a,
   .archive a,
-  .sidebar a,
   .site-footer a {
     color: #8d2332 !important;
   }
@@ -365,7 +353,7 @@ button[title*="Dark"] {
   }
 }
 
-/* ===== SIDEBAR (ONLY LEFT COLUMN) ===== */
+/* ===== SIDEBAR LEFT COLUMN ONLY ===== */
 
 /* nome */
 .author__name {
@@ -377,11 +365,17 @@ button[title*="Dark"] {
   color: #8d2332 !important;
 }
 
-/* link sidebar */
-.author__urls a {
+/* tutto il testo della sidebar */
+.author__urls,
+.author__urls li,
+.author__urls li a,
+.author__urls li span,
+.author__urls .label,
+.sidebar p {
   color: #8d2332 !important;
 }
 
+/* hover link sidebar */
 .author__urls a:hover {
   color: #6f1b27 !important;
 }
@@ -389,6 +383,7 @@ button[title*="Dark"] {
 /* ===== ICONE ISTITUZIONALI → ROSSO ===== */
 .author__urls .fa-map-marker,
 .author__urls .fa-map-marker-alt,
+.author__urls .fa-location-dot,
 .author__urls .fa-envelope,
 .author__urls .fa-university,
 .author__urls .fa-building-columns {
@@ -408,6 +403,7 @@ button[title*="Dark"] {
   color: #00CCBB !important;
 }
 
-.author__urls .ai-scopus {
+.author__urls .ai-scopus,
+.author__urls .fa-book {
   color: #E9711C !important;
 }
