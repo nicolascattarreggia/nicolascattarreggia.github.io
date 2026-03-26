@@ -1,19 +1,6 @@
 {% assign teaching_data = site.data.teaching %}
 
 <style>
-  .archive {
-    width: 80%;
-    margin: 0 auto;
-    float: none;
-    padding-right: 0;
-  }
-  
-  @media (min-width: 80em) {
-    .archive {
-      width: 70%;
-    }
-  }
-
   .teaching-year-block {
     margin-bottom: 1rem;
   }
@@ -153,10 +140,8 @@
   }
 </style>
 
-<div class="cv-container">
-  <div class="cv-content">
-    {% for section in teaching_data %}
-      {% include teaching-section.html section=section is_first=forloop.first %}
-    {% endfor %}
-  </div>
+<div class="cv-wrapper">
+  {% for section in teaching_data %}
+    {% include teaching-section.html section=section is_first=forloop.first %}
+  {% endfor %}
 </div>
