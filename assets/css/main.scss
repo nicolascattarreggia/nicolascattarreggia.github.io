@@ -414,3 +414,11 @@ body,
   border: 3px solid #8d2332 !important;
   border-radius: 50%; /* mantiene il cerchio */
 }
+
+/* ===== MOBILE MENU ICON (burger) ===== */
+
+.greedy-nav .navicon,
+.greedy-nav .navicon:before,
+.greedy-nav .navicon:after {
+  background: #8d2332 !important; /* rosso Sapienza */
+}
