@@ -407,3 +407,10 @@ body,
 .author__urls .fa-book {
   color: #E9711C !important;
 }
+
+/* ===== AUTHOR PHOTO BORDER (Sapienza red) ===== */
+
+.author__avatar img {
+  border: 3px solid #8d2332 !important;
+  border-radius: 50%; /* mantiene il cerchio */
+}
