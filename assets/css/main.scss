@@ -196,37 +196,97 @@ button[title*="Dark"] {
   display: none !important;
 }
 
+/* ===== FORCE LIGHT MODE / NO ADAPTIVE DARK MODE ===== */
+
+:root {
+  color-scheme: light !important;
+}
+
+html,
+body {
+  background: #ffffff !important;
+  color: #4a4a4a !important;
+}
+
+/* contenitori principali */
+.page,
+.page__inner-wrap,
+.initial-content,
+.layout--archive,
+.archive,
+.archive__item,
+.sidebar,
+.sidebar__right,
+.masthead,
+.page__footer,
+.site-footer {
+  background-color: #ffffff !important;
+}
+
+/* testo generale */
+body,
+.page,
+.page__content,
+.archive,
+.sidebar,
+.site-footer {
+  color: #4a4a4a !important;
+}
+
+/* link generali nel contenuto */
+.page__content a,
+.archive a,
+.sidebar a,
+.site-footer a {
+  color: #8d2332;
+}
+
+/* nasconde comunque i toggle dark mode */
+.dark-mode-toggle,
+.theme-toggle,
+button[title*="Dark"] {
+  display: none !important;
+}
+
 /* ===== FULL SAPienza TOP BAR ===== */
 
 .masthead,
 .masthead__inner-wrap,
 .greedy-nav,
 .greedy-nav .visible-links,
-.greedy-nav .hidden-links {
+.greedy-nav .hidden-links,
+.greedy-nav ul,
+.greedy-nav li {
   background: #8d2332 !important;
+  background-color: #8d2332 !important;
+  box-shadow: none !important;
+  border: 0 !important;
 }
 
-/* rimuove ogni box interno bianco */
+/* rimuove eventuali box/overlay bianchi del tema */
 .masthead__inner-wrap,
 .greedy-nav,
 .greedy-nav .visible-links,
 .greedy-nav .hidden-links {
-  border: 0 !important;
-  box-shadow: none !important;
+  background-image: none !important;
 }
 
-/* eventuali pseudo-elementi del tema */
-.greedy-nav::before,
-.greedy-nav::after,
+/* pseudo-elementi */
 .masthead::before,
-.masthead::after {
+.masthead::after,
+.masthead__inner-wrap::before,
+.masthead__inner-wrap::after,
+.greedy-nav::before,
+.greedy-nav::after {
   background: transparent !important;
   box-shadow: none !important;
+  border: 0 !important;
 }
 
-/* testi bianchi */
+/* testi bianchi nella top bar */
 .site-title,
 .site-title:visited,
+.site-title:hover,
 .greedy-nav a,
 .greedy-nav a:visited,
 .greedy-nav .visible-links a,
@@ -240,15 +300,67 @@ button[title*="Dark"] {
   color: #f3d9dd !important;
 }
 
-/* link attivo */
-.greedy-nav .visible-links a:hover,
+/* voce attiva */
 .greedy-nav .visible-links .active a,
 .greedy-nav a.current {
+  color: #ffffff !important;
   border-bottom-color: #ffffff !important;
 }
 
-/* se il tema applica sfondo bianco ai singoli li */
-.greedy-nav .visible-links li,
-.greedy-nav .hidden-links li {
-  background: transparent !important;
+/* bottone menu mobile */
+.greedy-nav button,
+.greedy-nav .navicon,
+.greedy-nav .navicon:before,
+.greedy-nav .navicon:after {
+  background: #ffffff !important;
+  color: #ffffff !important;
+}
+
+/* dropdown mobile */
+.greedy-nav .hidden-links a {
+  background: #8d2332 !important;
+  color: #ffffff !important;
+}
+
+/* ===== FORCE WHITE BACKGROUND ALSO ON MOBILE ===== */
+
+@media (prefers-color-scheme: dark) {
+  html,
+  body,
+  .page,
+  .page__inner-wrap,
+  .initial-content,
+  .layout--archive,
+  .archive,
+  .sidebar,
+  .page__footer,
+  .site-footer {
+    background: #ffffff !important;
+    color: #4a4a4a !important;
+  }
+
+  .page__content a,
+  .archive a,
+  .sidebar a,
+  .site-footer a {
+    color: #8d2332 !important;
+  }
+
+  .masthead,
+  .masthead__inner-wrap,
+  .greedy-nav,
+  .greedy-nav .visible-links,
+  .greedy-nav .hidden-links,
+  .greedy-nav ul,
+  .greedy-nav li {
+    background: #8d2332 !important;
+    color: #ffffff !important;
+  }
+
+  .site-title,
+  .greedy-nav a,
+  .greedy-nav .visible-links a,
+  .greedy-nav .hidden-links a {
+    color: #ffffff !important;
+  }
 }
