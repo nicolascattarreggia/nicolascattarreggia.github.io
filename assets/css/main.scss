@@ -353,42 +353,6 @@ body,
   }
 }
 
-/* ===== SIDEBAR LEFT COLUMN ONLY ===== */
-
-/* nome */
-.author__name {
-  color: #8d2332 !important;
-}
-
-/* descrizione sotto nome */
-.author__bio {
-  color: #8d2332 !important;
-}
-
-/* tutto il testo della sidebar */
-.author__urls,
-.author__urls li,
-.author__urls li a,
-.author__urls li span,
-.author__urls .label,
-.sidebar p {
-  color: #8d2332 !important;
-}
-
-/* hover link sidebar */
-.author__urls a:hover {
-  color: #6f1b27 !important;
-}
-
-/* ===== ICONE ISTITUZIONALI → ROSSO ===== */
-.author__urls .fa-map-marker,
-.author__urls .fa-map-marker-alt,
-.author__urls .fa-location-dot,
-.author__urls .fa-envelope,
-.author__urls .fa-university,
-.author__urls .fa-building-columns {
-  color: #8d2332 !important;
-}
 
 /* ===== ICONE SOCIAL → COLORI ORIGINALI ===== */
 .author__urls .fa-google {
