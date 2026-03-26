@@ -195,3 +195,38 @@
 button[title*="Dark"] {
   display: none !important;
 }
+
+/* ===== HEADER (TOP BAR SAPienza STYLE) ===== */
+
+/* 🔴 Sfondo top bar */
+.masthead {
+  background-color: #8d2332 !important;
+}
+
+/* 🔴 Nome (sinistra) */
+.site-title {
+  color: #ffffff !important;
+  font-weight: 700;
+}
+
+/* 🔴 Menu (CV, Teaching, Projects) */
+.site-nav .page-link {
+  color: #ffffff !important;
+  font-weight: 500;
+}
+
+/* 🔴 Hover */
+.site-nav .page-link:hover {
+  color: #f2d6da !important; /* rosa chiaro Sapienza */
+}
+
+/* 🔴 Pagina attiva */
+.site-nav .page-link.current {
+  color: #ffffff !important;
+  border-bottom: 2px solid #ffffff;
+}
+
+/* 🔴 Linea sotto header (se presente) */
+.masthead__inner-wrap {
+  border-bottom: none !important;
+}
