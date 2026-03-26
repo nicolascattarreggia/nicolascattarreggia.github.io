@@ -7,16 +7,27 @@
     float: none;
     padding-right: 0;
   }
-  
+
   @media (min-width: 80em) {
     .archive {
       width: 70%;
     }
   }
 
-  .projects-shell {
-    max-width: 980px;
-    margin: 0 auto;
+  /* forza il contenuto della pagina a stare più lontano dalla sidebar */
+  .page {
+    width: 100%;
+  }
+
+  .page__inner-wrap {
+    max-width: 1400px;
+  }
+
+  .archive,
+  .projects-container {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .projects-container {
@@ -126,10 +137,6 @@
   }
 
   @media (max-width: 900px) {
-    .projects-shell {
-      max-width: 100%;
-    }
-
     .project-grid {
       grid-template-columns: 1fr;
       row-gap: 1rem;
@@ -142,66 +149,62 @@
   }
 </style>
 
-<div class="projects-shell">
-  <div class="projects-container">
-    <h1 class="projects-title">Current Projects</h1>
+<div class="projects-container">
+  
+  {% for project in projects %}
+    {% if project.status == "current" %}
+    <div class="project-card">
+      <div class="project-grid">
+        <div class="project-logo-wrap">
+          {% if project.logo %}
+            <img src="{{ project.logo | relative_url }}" alt="{{ project.short_name }} logo" class="project-logo">
+          {% endif %}
+        </div>
 
-    {% for project in projects %}
-      {% if project.status == "current" %}
-      <div class="project-card">
-        <div class="project-grid">
-          
-          <div class="project-logo-wrap">
-            {% if project.logo %}
-              <img src="{{ project.logo | relative_url }}" alt="{{ project.short_name }} logo" class="project-logo">
+        <div class="project-content">
+          {% if project.short_name %}
+            <div class="project-badge">{{ project.short_name }}</div>
+          {% endif %}
+
+          <div class="project-name">
+            {% if project.url %}
+              <a href="{{ project.url }}" target="_blank">{{ project.title }}</a>
+            {% else %}
+              {{ project.title }}
             {% endif %}
           </div>
 
-          <div class="project-content">
-            {% if project.short_name %}
-              <div class="project-badge">{{ project.short_name }}</div>
+          <div class="project-meta">
+            {% if project.period %}
+              <div class="project-label">Period</div>
+              <div class="project-value">{{ project.period }}</div>
             {% endif %}
 
-            <div class="project-name">
-              {% if project.url %}
-                <a href="{{ project.url }}" target="_blank">{{ project.title }}</a>
-              {% else %}
-                {{ project.title }}
-              {% endif %}
-            </div>
+            {% if project.role %}
+              <div class="project-label">Role</div>
+              <div class="project-value">{{ project.role }}</div>
+            {% endif %}
 
-            <div class="project-meta">
-              {% if project.period %}
-                <div class="project-label">Period</div>
-                <div class="project-value">{{ project.period }}</div>
-              {% endif %}
-
-              {% if project.role %}
-                <div class="project-label">Role</div>
-                <div class="project-value">{{ project.role }}</div>
-              {% endif %}
-
-              {% if project.funding %}
-                <div class="project-label">Funding</div>
-                <div class="project-value">
-                  {% if project.funding_url %}
-                    <a href="{{ project.funding_url }}" target="_blank">{{ project.funding }}</a>
-                  {% else %}
-                    {{ project.funding }}
-                  {% endif %}
-                </div>
-              {% endif %}
-            </div>
-
-            {% if project.description %}
-              <div class="project-description">
-                {{ project.description }}
+            {% if project.funding %}
+              <div class="project-label">Funding</div>
+              <div class="project-value">
+                {% if project.funding_url %}
+                  <a href="{{ project.funding_url }}" target="_blank">{{ project.funding }}</a>
+                {% else %}
+                  {{ project.funding }}
+                {% endif %}
               </div>
             {% endif %}
           </div>
+
+          {% if project.description %}
+            <div class="project-description">
+              {{ project.description }}
+            </div>
+          {% endif %}
         </div>
       </div>
-      {% endif %}
-    {% endfor %}
-  </div>
+    </div>
+    {% endif %}
+  {% endfor %}
 </div>
