@@ -14,6 +14,11 @@
     }
   }
 
+  .projects-shell {
+    max-width: 980px;
+    margin: 0 auto;
+  }
+
   .projects-container {
     margin-top: 0.5rem;
   }
@@ -22,12 +27,11 @@
     margin-bottom: 1.5rem;
   }
 
-  /* 🔴 CARD stile Sapienza elegante */
   .project-card {
     background: #f8f9fa;
     border: 2px solid #8d2332;
     border-radius: 20px;
-    padding: 1.5rem 1.7rem;
+    padding: 1.35rem 1.45rem;
     margin-bottom: 1.5rem;
     transition: all 0.2s ease;
   }
@@ -39,8 +43,8 @@
 
   .project-grid {
     display: grid;
-    grid-template-columns: 180px 1fr;
-    column-gap: 1.6rem;
+    grid-template-columns: 150px 1fr;
+    column-gap: 1.25rem;
     align-items: center;
   }
 
@@ -51,12 +55,11 @@
   }
 
   .project-logo {
-    max-width: 140px;
-    max-height: 110px;
+    max-width: 120px;
+    max-height: 95px;
     object-fit: contain;
   }
 
-  /* 🔴 BADGE Sapienza */
   .project-badge {
     display: inline-block;
     background: #8d2332;
@@ -68,7 +71,6 @@
     margin-bottom: 0.6rem;
   }
 
-  /* 🔴 TITOLO */
   .project-name {
     font-size: 1.15rem;
     font-weight: 700;
@@ -85,7 +87,6 @@
     text-decoration: underline;
   }
 
-  /* 🔹 META */
   .project-meta {
     display: grid;
     grid-template-columns: 90px 1fr;
@@ -94,32 +95,30 @@
     margin-bottom: 0.9rem;
   }
 
- .project-label {
-  color: #7a7a7a;
-  font-size: 0.93rem;
+  .project-label {
+    color: #7a7a7a;
+    font-size: 0.93rem;
+    font-weight: 400;
   }
 
- .project-value {
-  color: #4a4a4a;
-  font-size: 0.96rem;
-  font-weight: 700;
-  line-height: 1.35;
+  .project-value {
+    color: #4a4a4a;
+    font-size: 0.96rem;
+    font-weight: 700;
+    line-height: 1.35;
   }
 
-  /* 🔗 LINK stile paper */
- .project-value a {
-  color: inherit;        /* prende lo stesso colore del testo */
-  font-weight: inherit;  /* prende lo stesso grassetto */
-  text-decoration: none;
-  border-bottom: none;
+  .project-value a {
+    color: inherit;
+    font-weight: inherit;
+    text-decoration: none;
+    border-bottom: none;
   }
 
- #.project-value a:hover {
- # text-decoration: underline; /* opzionale */
- #}
+  .project-value a:hover {
+    text-decoration: underline;
+  }
 
-
-  /* 🔹 DESCRIPTION */
   .project-description {
     color: #4f5560;
     font-size: 0.96rem;
@@ -127,6 +126,10 @@
   }
 
   @media (max-width: 900px) {
+    .projects-shell {
+      max-width: 100%;
+    }
+
     .project-grid {
       grid-template-columns: 1fr;
       row-gap: 1rem;
@@ -139,70 +142,66 @@
   }
 </style>
 
-<div class="projects-container">
-  <h1 class="projects-title">Current Projects</h1>
+<div class="projects-shell">
+  <div class="projects-container">
+    <h1 class="projects-title">Current Projects</h1>
 
-  {% for project in projects %}
-    {% if project.status == "current" %}
-    <div class="project-card">
-      <div class="project-grid">
-        
-        <!-- LOGO -->
-        <div class="project-logo-wrap">
-          {% if project.logo %}
-            <img src="{{ project.logo | relative_url }}" alt="{{ project.short_name }} logo" class="project-logo">
-          {% endif %}
-        </div>
-
-        <!-- CONTENT -->
-        <div class="project-content">
+    {% for project in projects %}
+      {% if project.status == "current" %}
+      <div class="project-card">
+        <div class="project-grid">
           
-          {% if project.short_name %}
-            <div class="project-badge">{{ project.short_name }}</div>
-          {% endif %}
-
-          <div class="project-name">
-            {% if project.url %}
-              <a href="{{ project.url }}" target="_blank">{{ project.title }}</a>
-            {% else %}
-              {{ project.title }}
+          <div class="project-logo-wrap">
+            {% if project.logo %}
+              <img src="{{ project.logo | relative_url }}" alt="{{ project.short_name }} logo" class="project-logo">
             {% endif %}
           </div>
 
-          <div class="project-meta">
-            {% if project.period %}
-              <div class="project-label">Period</div>
-              <div class="project-value">{{ project.period }}</div>
+          <div class="project-content">
+            {% if project.short_name %}
+              <div class="project-badge">{{ project.short_name }}</div>
             {% endif %}
 
-            {% if project.role %}
-              <div class="project-label">Role</div>
-              <div class="project-value">{{ project.role }}</div>
-            {% endif %}
+            <div class="project-name">
+              {% if project.url %}
+                <a href="{{ project.url }}" target="_blank">{{ project.title }}</a>
+              {% else %}
+                {{ project.title }}
+              {% endif %}
+            </div>
 
-            {% if project.funding %}
-              <div class="project-label">Funding</div>
-              <div class="project-value">
-                {% if project.funding_url %}
-                  <a href="{{ project.funding_url }}" target="_blank">
+            <div class="project-meta">
+              {% if project.period %}
+                <div class="project-label">Period</div>
+                <div class="project-value">{{ project.period }}</div>
+              {% endif %}
+
+              {% if project.role %}
+                <div class="project-label">Role</div>
+                <div class="project-value">{{ project.role }}</div>
+              {% endif %}
+
+              {% if project.funding %}
+                <div class="project-label">Funding</div>
+                <div class="project-value">
+                  {% if project.funding_url %}
+                    <a href="{{ project.funding_url }}" target="_blank">{{ project.funding }}</a>
+                  {% else %}
                     {{ project.funding }}
-                  </a>
-                {% else %}
-                  {{ project.funding }}
-                {% endif %}
+                  {% endif %}
+                </div>
+              {% endif %}
+            </div>
+
+            {% if project.description %}
+              <div class="project-description">
+                {{ project.description }}
               </div>
             {% endif %}
           </div>
-
-          {% if project.description %}
-            <div class="project-description">
-              {{ project.description }}
-            </div>
-          {% endif %}
-
         </div>
       </div>
-    </div>
-    {% endif %}
-  {% endfor %}
+      {% endif %}
+    {% endfor %}
+  </div>
 </div>
