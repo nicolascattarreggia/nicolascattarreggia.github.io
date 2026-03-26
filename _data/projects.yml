@@ -32,7 +32,7 @@
   description: "The project focuses on developing an innovative forensic structural engineering course using advanced and interactive learning technologies."
 
 - short_name: "RECONSTRUCT"
-  status: "past"
+  status: "current"
   title: "RECONSTRUCT - Forensic Structural Engineering database for HEI and pilot course with innovative and interactive learning methods"
   url: ""
   logo: "/images/projects/reconstruct.png"
@@ -54,7 +54,7 @@
   description: "Development of methods for the risk-based management of existing bridges considering deterioration and robustness."
 
 - short_name: "GENESIS"
-  status: "past"
+  status: "current"
   title: "GENESIS - GEstioNE del rischio SISmico per la valorizzazione turistica dei centri storici del Mezzogiorno"
   url: ""
   logo: "/images/projects/genesis.png"
@@ -65,7 +65,7 @@
   description: "Seismic characterization for the assessment of the San Giovannello church in Gerace."
 
 - short_name: "Tech4You"
-  status: "past"
+  status: "current"
   title: "Tech4You - Technologies for climate change adaptation and quality of life improvement"
   url: ""
   logo: "/images/projects/tech4you.png"
@@ -76,7 +76,7 @@
   description: "Research with Mediterranea University of Reggio Calabria on the impact of climate change on the progressive collapse resistance of reinforced concrete buildings using the Applied Element Method."
 
 - short_name: "NSERC"
-  status: "past"
+  status: "current"
   title: "Structural assessment of corrosion and deterioration effects on reinforced concrete systems"
   url: ""
   logo: "/images/projects/nserc.png"
@@ -87,7 +87,7 @@
   description: "Research with McGill University on the seismic performance of corroded reinforced concrete structures."
 
 - short_name: "FIRMITAS"
-  status: "past"
+  status: "current"
   title: "FIRMITAS: multi-hazard assessment and retrofit of bridges"
   url: ""
   logo: "/images/projects/firmitas.png"
@@ -98,7 +98,7 @@
   description: "Development of multi-hazard risk assessment methods for bridge portfolios."
 
 - short_name: "CSLLPP-ReLUIS"
-  status: "past"
+  status: "current"
   title: "CSLLPP-ReLUIS: application and update of bridge guidelines"
   url: ""
   logo: "/images/projects/csllpp-reluis.png"
@@ -109,7 +109,7 @@
   description: "Application and revision of Italian bridge guidelines based on real case studies."
 
 - short_name: "SERRAVALLE"
-  status: "past"
+  status: "current"
   title: "Infrastructure engineering agreement with Milano Serravalle"
   url: ""
   logo: "/images/projects/serravalle.png"
@@ -120,7 +120,7 @@
   description: "Development of prioritization methods for interventions on a network of about 400 bridges."
 
 - short_name: "ReLUIS WP5"
-  status: "past"
+  status: "current"
   title: "ReLUIS WP5: upgrading of existing bridges"
   url: ""
   logo: "/images/projects/reluis.png"
