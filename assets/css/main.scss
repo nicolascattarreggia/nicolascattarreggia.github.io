@@ -364,3 +364,48 @@ button[title*="Dark"] {
     color: #ffffff !important;
   }
 }
+
+/* ===== SIDEBAR COLOR STRATEGY ===== */
+
+/* 🔴 Link testo sempre Sapienza */
+.sidebar a,
+.author__urls a {
+  color: #8d2332 !important;
+}
+
+.sidebar a:hover,
+.author__urls a:hover {
+  color: #6f1b27 !important;
+}
+
+/* ===== ICONE ISTITUZIONALI → ROSSO ===== */
+.author__urls .fa-map-marker,
+.author__urls .fa-map-marker-alt,
+.author__urls .fa-envelope,
+.author__urls .fa-university,
+.author__urls .fa-building-columns {
+  color: #8d2332 !important;
+}
+
+/* ===== ICONE ACCADEMICHE → COLORI ORIGINALI ===== */
+
+/* Google Scholar (rosso Google) */
+.author__urls .fa-google {
+  color: #DB4437 !important;
+}
+
+/* ORCID (verde ufficiale) */
+.author__urls .fa-orcid {
+  color: #A6CE39 !important;
+}
+
+/* ResearchGate (verde acqua) */
+.author__urls .fa-researchgate {
+  color: #00CCBB !important;
+}
+
+/* Scopus (rosso scuro) */
+.author__urls .fa-book,
+.author__urls .ai-scopus {
+  color: #E9711C !important;
+}
