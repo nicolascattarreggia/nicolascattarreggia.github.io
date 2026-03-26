@@ -1,49 +1,12 @@
 {% assign projects = site.data.projects %}
 
 <style>
-  .archive {
-    width: 80%;
-    margin: 0 auto;
-    float: none;
-    padding-right: 0;
-  }
-
-  @media (min-width: 80em) {
-    .archive {
-      width: 70%;
-    }
-  }
-
-  /* forza il contenuto della pagina a stare più lontano dalla sidebar */
-  .page {
-    width: 100%;
-  }
-
-  .page__inner-wrap {
-    max-width: 1400px;
-  }
-
-  .archive,
-  .projects-container {
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .projects-container {
-    margin-top: 0.5rem;
-  }
-
-  .projects-title {
-    margin-bottom: 1.5rem;
-  }
-
   .project-card {
     background: #f8f9fa;
     border: 2px solid #8d2332;
     border-radius: 20px;
-    padding: 1.35rem 1.45rem;
-    margin-bottom: 1.5rem;
+    padding: 1.2rem 1.35rem;
+    margin-bottom: 1.2rem;
     transition: all 0.2s ease;
   }
 
@@ -54,20 +17,21 @@
 
   .project-grid {
     display: grid;
-    grid-template-columns: 150px 1fr;
-    column-gap: 1.25rem;
-    align-items: center;
+    grid-template-columns: 120px 1fr;
+    column-gap: 1rem;
+    align-items: start;
   }
 
   .project-logo-wrap {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    padding-top: 0.2rem;
   }
 
   .project-logo {
-    max-width: 120px;
-    max-height: 95px;
+    max-width: 95px;
+    max-height: 80px;
     object-fit: contain;
   }
 
@@ -76,22 +40,24 @@
     background: #8d2332;
     color: #ffffff;
     border-radius: 14px;
-    padding: 0.25rem 0.8rem;
-    font-size: 0.9rem;
+    padding: 0.2rem 0.7rem;
+    font-size: 0.85rem;
     font-weight: 700;
-    margin-bottom: 0.6rem;
+    margin-bottom: 0.55rem;
   }
 
   .project-name {
-    font-size: 1.15rem;
+    font-size: 1.02rem;
     font-weight: 700;
-    line-height: 1.35;
-    margin-bottom: 0.8rem;
+    line-height: 1.3;
+    margin-bottom: 0.65rem;
+    color: #4a4a4a;
   }
 
   .project-name a {
     color: #000000;
     text-decoration: none;
+    font-weight: 700;
   }
 
   .project-name a:hover {
@@ -100,21 +66,22 @@
 
   .project-meta {
     display: grid;
-    grid-template-columns: 90px 1fr;
-    row-gap: 0.4rem;
-    column-gap: 0.6rem;
-    margin-bottom: 0.9rem;
+    grid-template-columns: 72px 1fr;
+    row-gap: 0.3rem;
+    column-gap: 0.55rem;
+    margin-bottom: 0.75rem;
   }
 
   .project-label {
     color: #7a7a7a;
-    font-size: 0.93rem;
+    font-size: 0.92rem;
     font-weight: 400;
+    line-height: 1.35;
   }
 
   .project-value {
     color: #4a4a4a;
-    font-size: 0.96rem;
+    font-size: 0.95rem;
     font-weight: 700;
     line-height: 1.35;
   }
@@ -123,7 +90,6 @@
     color: inherit;
     font-weight: inherit;
     text-decoration: none;
-    border-bottom: none;
   }
 
   .project-value a:hover {
@@ -132,29 +98,32 @@
 
   .project-description {
     color: #4f5560;
-    font-size: 0.96rem;
-    line-height: 1.5;
+    font-size: 0.95rem;
+    line-height: 1.45;
   }
 
   @media (max-width: 900px) {
     .project-grid {
       grid-template-columns: 1fr;
-      row-gap: 1rem;
-      align-items: start;
+      row-gap: 0.8rem;
     }
 
     .project-logo-wrap {
       justify-content: flex-start;
     }
+
+    .project-meta {
+      grid-template-columns: 72px 1fr;
+    }
   }
 </style>
 
-<div class="projects-container">
-  
+<div class="cv-wrapper">
   {% for project in projects %}
     {% if project.status == "current" %}
     <div class="project-card">
       <div class="project-grid">
+
         <div class="project-logo-wrap">
           {% if project.logo %}
             <img src="{{ project.logo | relative_url }}" alt="{{ project.short_name }} logo" class="project-logo">
