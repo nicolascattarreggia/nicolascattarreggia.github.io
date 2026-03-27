@@ -96,12 +96,12 @@
   cursor: pointer;
   list-style: none;
   background: #e9ebef;
-  padding: 0.75rem 1rem;
+  padding: 0.6rem 1.2rem;
+  margin: 0 -1.2rem 0.3rem -1.2rem; /* 👈 fondamentale */
   color: #4a4a4a;
   font-weight: 700;
   font-size: 1.05rem;
-  line-height: 1.3;
-  margin: 0;
+  line-height: 1.25;
 }
 
 .cv-section summary::-webkit-details-marker {
@@ -138,8 +138,8 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 0.8rem;
-  padding: 0.85rem 0;
+  gap: 0.6rem;
+  padding: 0.55rem 0;
   border-bottom: 1px solid #d8dbe2;
 }
 
