@@ -441,26 +441,4 @@ body,
   }
 
 
-    @media (min-width: 64em) {
-  .page {
-    width: 80% !important;
-    max-width: none !important;
-    float: none !important;
-    margin: 0 auto !important;
-    padding-right: 0 !important;
-  }
-}
 
-@media (min-width: 80em) {
-  .page {
-    width: 70% !important;
-  }
-}
-.container-lg,
-.container-md {
-  max-width: 1400px !important;
-}
-
-.markdown-body {
-  max-width: none !important;
-}
