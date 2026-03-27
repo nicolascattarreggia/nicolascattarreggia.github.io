@@ -2,20 +2,27 @@
 
 <style>
   .teaching-year-block {
+    background: #f3f4f6;
+    border-left: 3px solid #8d2332;
+    border-radius: 18px;
     margin-bottom: 1rem;
+    overflow: hidden;
+  }
+
+  .teaching-year-block[open] {
+    padding-bottom: 0.45rem;
   }
 
   .teaching-year-summary {
     cursor: pointer;
     list-style: none;
     background: #e9ebef;
-    border-left: 3px solid #8d2332;
-    border-radius: 16px;
-    padding: 0.75rem 1rem;
+    padding: 0.7rem 1.2rem;
+    margin: 0;
     color: #4a4a4a;
     font-weight: 700;
     font-size: 1.05rem;
-    line-height: 1.3;
+    line-height: 1.25;
   }
 
   .teaching-year-summary::-webkit-details-marker {
@@ -41,11 +48,11 @@
   }
 
   .teaching-year-content {
-    background: #f3f4f6;
-    border-left: 3px solid #8d2332;
-    border-radius: 18px;
-    margin-top: 0.5rem;
-    padding: 0.7rem 1rem;
+    background: transparent;
+    border-left: 0;
+    border-radius: 0;
+    margin-top: 0;
+    padding: 0.7rem 1rem 0.4rem 1rem;
   }
 
   .teaching-item-row {
