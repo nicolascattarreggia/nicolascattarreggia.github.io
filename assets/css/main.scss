@@ -81,9 +81,14 @@
   scroll-margin-top: 90px;
 }
 
-/* BOX */
+/* BOX UNICO */
 .cv-section details {
-  margin-bottom: 0.6rem;
+  background: #f3f4f6;
+  border-left: 3px solid #8d2332;
+  border-radius: 18px;
+  padding: 0;
+  margin-bottom: 0.8rem;
+  overflow: hidden;
 }
 
 /* HEADER */
@@ -91,18 +96,41 @@
   cursor: pointer;
   list-style: none;
   background: #e9ebef;
-  border-left: 3px solid #8d2332;
-  border-radius: 16px;
   padding: 0.75rem 1rem;
   color: #4a4a4a;
   font-weight: 700;
   font-size: 1.05rem;
   line-height: 1.3;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 .cv-section summary::-webkit-details-marker {
   display: none;
+}
+
+.cv-section summary::before {
+  content: "▶";
+  font-size: 0.9rem;
+  color: #4b5563;
+  transition: transform 0.2s ease;
+  display: inline-block;
+  margin-right: 0.55rem;
+}
+
+.cv-section details[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+/* CONTENUTO INTERNO */
+.cv-section .cv-list {
+  margin: 0;
+  padding: 0.35rem 1rem 0.6rem 1rem;
+  list-style: none;
+}
+
+.cv-section details > p {
+  margin: 0;
+  padding: 0.75rem 1rem 0.9rem 1rem;
 }
 
 /* ITEMS */
@@ -111,8 +139,8 @@
   justify-content: space-between;
   align-items: flex-start;
   gap: 0.8rem;
-  padding: 0.25rem 0;
-  border-bottom: 1px solid #f0f0f0;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid #d8dbe2;
 }
 
 .cv-item:last-child {
@@ -352,7 +380,6 @@ body,
   }
 }
 
-
 /* ===== ICONE SOCIAL → COLORI ORIGINALI ===== */
 .author__urls .fa-google {
   color: #DB4437 !important;
@@ -375,7 +402,7 @@ body,
 
 .author__avatar img {
   border: 3px solid #8d2332 !important;
-  border-radius: 50%; /* mantiene il cerchio */
+  border-radius: 50%;
 }
 
 /* ===== MOBILE MENU ICON (burger) ===== */
@@ -383,11 +410,11 @@ body,
 .greedy-nav .navicon,
 .greedy-nav .navicon:before,
 .greedy-nav .navicon:after {
-  background: #8d2332 !important; /* rosso Sapienza */
+  background: #8d2332 !important;
 }
 
 /* ===== PAGE TITLES (CV, Teaching, Projects) ===== */
 
 .page__title {
-  color: #8d2332 !important; /* rosso Sapienza */
+  color: #8d2332 !important;
 }
