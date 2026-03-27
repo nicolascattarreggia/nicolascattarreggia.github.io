@@ -456,4 +456,11 @@ body,
     width: 70% !important;
   }
 }
+.container-lg,
+.container-md {
+  max-width: 1400px !important;
+}
 
+.markdown-body {
+  max-width: none !important;
+}
