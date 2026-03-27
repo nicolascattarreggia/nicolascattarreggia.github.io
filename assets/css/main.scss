@@ -427,8 +427,22 @@ body,
   color: #8d2332 !important;
 }
 
-.layout--single .page,
-.layout--archive .page {
-  width: calc(100% - 260px);
-  max-width: none;
+@media (min-width: 64em) {
+  .layout--single .page,
+  .layout--archive .page {
+    width: calc(100% - 260px) !important;
+    max-width: none !important;
+    padding-right: 0 !important;
+  }
+
+  .layout--single .page__inner-wrap,
+  .layout--archive .page__inner-wrap {
+    max-width: 100% !important;
+  }
+
+  .layout--single .page__content,
+  .layout--archive .page__content {
+    width: 100% !important;
+    max-width: none !important;
+  }
 }
