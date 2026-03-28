@@ -1,0 +1,29 @@
+- title: "Scientific consultancy on the identifiation, modeling and simulation of fire scenarios in steel truss bridges."
+  subtitle: ""
+  date: "2026"
+  description: "Identification and selection of representative fire scenarios, followed by supervision of Fire Dynamics Simulator (FDS) modeling activities for fire safety engineering assessments of new steel truss bridges, including the definition of temperature–time curves at critical structural points."
+
+- title: "Seismic assessment and retrofitting of Dutch historical masonry churches subjected to man-induced earthquakes"
+  subtitle: ""
+  date: "2024"
+  description: "Conducted advanced structural analyses through the development of Applied Element Method (AEM) models to evaluate as-built seismic vulnerabilities and the effectiveness of retrofit interventions. Activity carried out via RESISK S.r.l."
+
+- title: "Seismic assessment and retrofitting design of the dome of the earthquake-damaged San Marco Church in L’Aquila, Italy"
+  subtitle: ""
+  date: "2023"
+  description: "Developed an Applied Element Method (AEM) model, validated against observed post-event damage, to assess the residual capacity of the structure under vertical and seismic loads, both in its existing condition and after the designed strengthening and seismic improvement interventions in the deformed state via non linear dynamic analyses."
+
+- title: "Structural assessment of the San Siro stadium in Milan, Italy"
+  subtitle: ""
+  date: "2022"
+  description: "Developed Applied Element Method (AEM) models to evaluate critical human-induced loads/acceleration/displacement and potential collapse mechanisms; and characterized the structural response under dynamic simulated crowd-induced excitations."
+
+- title: "Forensic structural studies on the collapse of the Morandi Bridge in Genoa, Italy"
+  subtitle: ""
+  date: "2020"
+  description: "Developed component and global models of the collapsed structure and performed Finite Element (FE), Applied Eelemen Method (AEM), and Modified Compression Field Therory (MCFT) analyses to assess structural performance under ordinary and extreme loads, investigate collapse causes, evaluate robustness, and identify failure mechanisms"
+
+- title: "Preliminary assessment of the design and seismic isolation strategies for a multi-span metropolitan bridge in Bogotá, Colombia"
+  subtitle: ""
+  date: "2018"
+  description: "Developed nonlinear Finite Element models to evaluate alternative seismic isolation systems (e.g., lead-rubber and curved surface sliding bearings). Soil–structure and track–structure interaction were considered to verify metro serviceability conditions."
