@@ -61,4 +61,12 @@ layout: archive
     open=false
   %}
 
+    {% assign consultancy_items = site.data.cv.consultancy %}
+  {% include cv-section.html
+    section_id="consultancy"
+    section_title="Consultancy activity"
+    items=consultancy_items
+    open=false
+  %}
+
 </div>
