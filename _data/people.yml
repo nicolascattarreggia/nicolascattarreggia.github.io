@@ -1,0 +1,29 @@
+intro: >-
+  This page provides a concise overview of current supervision, co-supervision and research collaborations. It is intentionally kept simple and will be updated progressively as new thesis, PhD and visiting activities develop.
+
+sections:
+  - title: "Current supervision and co-supervision"
+    items:
+      - name: "PhD research activities"
+        role: "Supervision / co-supervision"
+        description: >-
+          Research topics include seismic assessment and retrofitting of existing bridges, risk-informed decision-making, advanced numerical modelling and sustainability-oriented infrastructure management.
+      - name: "MSc thesis activities"
+        role: "Thesis supervision"
+        description: >-
+          Available and ongoing thesis topics are generally related to structural assessment, seismic risk, bridge infrastructure, collapse modelling, fire/extreme loading scenarios and sustainable retrofit strategies.
+
+  - title: "Research collaborations"
+    items:
+      - name: "Sapienza University of Rome"
+        role: "Institutional affiliation"
+        description: >-
+          Research and teaching activities within the Department of Structural and Geotechnical Engineering.
+      - name: "IUSS Pavia / ROSE School"
+        role: "Scientific collaboration"
+        description: >-
+          Ongoing collaborations on earthquake engineering, bridge assessment, risk analysis and advanced numerical modelling.
+      - name: "National and international partners"
+        role: "Project-based collaboration"
+        description: >-
+          Collaboration within research projects and scientific networks focused on existing structures, infrastructure risk, forensic structural engineering and resilience.

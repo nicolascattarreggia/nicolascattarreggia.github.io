@@ -1,0 +1,23 @@
+intro: >-
+  My research focuses on the assessment, modelling and retrofit of existing structures and infrastructure under seismic and extreme loading conditions, with particular attention to risk-informed decision-making, collapse mechanisms and sustainability-oriented intervention strategies.
+
+themes:
+  - title: "Existing bridges and infrastructure risk"
+    keywords: ["bridges", "risk assessment", "prioritisation", "management"]
+    description: >-
+      Development and application of risk-based approaches for the assessment and management of existing bridges and infrastructure portfolios, with emphasis on vulnerability, exposure, hazards, condition state and prioritisation of interventions.
+
+  - title: "Advanced numerical modelling up to collapse"
+    keywords: ["AEM", "FEM", "collapse", "nonlinear analysis"]
+    description: >-
+      Use of advanced numerical models to investigate the structural response from damage initiation to local and global failure, including progressive collapse mechanisms, load redistribution and, where appropriate, debris and component interaction.
+
+  - title: "Seismic assessment and sustainable retrofit"
+    keywords: ["seismic assessment", "retrofit", "life-cycle", "sustainability"]
+    description: >-
+      Assessment and retrofit of existing reinforced concrete and masonry structures, with attention to performance-based criteria, life-cycle thinking and the integration of structural, environmental and socio-economic consequences in decision-making.
+
+  - title: "Forensic structural engineering and extreme events"
+    keywords: ["forensic engineering", "failure analysis", "impact", "fire"]
+    description: >-
+      Back-analysis and interpretation of structural failures and abnormal loading scenarios, including bridge collapses, impact, fire and other extreme actions, to support a better understanding of failure mechanisms and robustness.
