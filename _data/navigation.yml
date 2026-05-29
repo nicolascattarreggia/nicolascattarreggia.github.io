@@ -23,11 +23,20 @@ main:
    - title: "CV"
      url: /cv/
 
+   - title: "Research"
+     url: /research/
+
    - title: "Teaching"
      url: /teaching/ 
 
    - title: "Projects"
      url: /projects/
+
+   - title: "People"
+     url: /people/
+
+   - title: "Opportunities"
+     url: /opportunities/
     
    - title: "Publications"
      url: /publications/
