@@ -1,0 +1,58 @@
+{% assign opp = site.data.opportunities %}
+
+<style>
+  .opportunities-intro,
+  .opportunities-contact {
+    color: #4f5560;
+    font-size: 0.98rem;
+    line-height: 1.55;
+    margin-bottom: 1.2rem;
+  }
+
+  .opportunity-card {
+    background: #f8f9fa;
+    border: 2px solid #8d2332;
+    border-radius: 20px;
+    padding: 1.15rem 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .opportunity-title {
+    font-size: 1.03rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #4a4a4a;
+    margin-bottom: 0.55rem;
+  }
+
+  .opportunity-description {
+    color: #4f5560;
+    font-size: 0.95rem;
+    line-height: 1.45;
+  }
+
+  .opportunities-contact {
+    background: #f3f4f6;
+    border-left: 3px solid #8d2332;
+    border-radius: 16px;
+    padding: 0.9rem 1rem;
+    margin-top: 1.1rem;
+  }
+</style>
+
+<div class="cv-wrapper">
+  {% if opp.intro %}
+    <div class="opportunities-intro">{{ opp.intro }}</div>
+  {% endif %}
+
+  {% for item in opp.opportunities %}
+    <div class="opportunity-card">
+      <div class="opportunity-title">{{ item.title }}</div>
+      {% if item.description %}<div class="opportunity-description">{{ item.description }}</div>{% endif %}
+    </div>
+  {% endfor %}
+
+  {% if opp.contact_note %}
+    <div class="opportunities-contact">{{ opp.contact_note }}</div>
+  {% endif %}
+</div>

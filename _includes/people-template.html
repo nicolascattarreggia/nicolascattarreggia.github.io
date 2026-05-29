@@ -1,0 +1,76 @@
+{% assign people = site.data.people %}
+
+<style>
+  .people-intro {
+    color: #4f5560;
+    font-size: 0.98rem;
+    line-height: 1.55;
+    margin-bottom: 1.2rem;
+  }
+
+  .people-section {
+    margin-bottom: 1.4rem;
+  }
+
+  .people-section-heading {
+    font-size: 1.08rem;
+    font-weight: 700;
+    color: #4a4a4a;
+    margin: 0.4rem 0 0.75rem 0;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid #e9ebef;
+  }
+
+  .people-card {
+    background: #f8f9fa;
+    border-left: 3px solid #8d2332;
+    border-radius: 18px;
+    padding: 1rem 1.15rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .people-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #4a4a4a;
+    line-height: 1.3;
+    margin-bottom: 0.35rem;
+  }
+
+  .people-role {
+    display: inline-block;
+    background: #8d2332;
+    color: #ffffff;
+    border-radius: 999px;
+    padding: 0.18rem 0.55rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0.55rem;
+  }
+
+  .people-description {
+    color: #4f5560;
+    font-size: 0.95rem;
+    line-height: 1.45;
+  }
+</style>
+
+<div class="cv-wrapper">
+  {% if people.intro %}
+    <div class="people-intro">{{ people.intro }}</div>
+  {% endif %}
+
+  {% for section in people.sections %}
+    <div class="people-section">
+      <div class="people-section-heading">{{ section.title }}</div>
+      {% for item in section.items %}
+        <div class="people-card">
+          <div class="people-name">{{ item.name }}</div>
+          {% if item.role %}<div class="people-role">{{ item.role }}</div>{% endif %}
+          {% if item.description %}<div class="people-description">{{ item.description }}</div>{% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  {% endfor %}
+</div>

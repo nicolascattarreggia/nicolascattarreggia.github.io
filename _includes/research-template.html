@@ -1,0 +1,117 @@
+{% assign research = site.data.research %}
+
+<style>
+  .research-intro,
+  .people-intro,
+  .opportunities-intro {
+    color: #4f5560;
+    font-size: 0.98rem;
+    line-height: 1.55;
+    margin-bottom: 1.2rem;
+  }
+
+  .theme-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .theme-card,
+  .people-card,
+  .opportunity-card {
+    background: #f8f9fa;
+    border: 2px solid #8d2332;
+    border-radius: 20px;
+    padding: 1.15rem 1.25rem;
+    margin-bottom: 1rem;
+    transition: all 0.2s ease;
+  }
+
+  .theme-card:hover,
+  .people-card:hover,
+  .opportunity-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+  }
+
+  .theme-title,
+  .people-section-title,
+  .opportunity-title {
+    font-size: 1.03rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #4a4a4a;
+    margin-bottom: 0.55rem;
+  }
+
+  .theme-description,
+  .people-description,
+  .opportunity-description {
+    color: #4f5560;
+    font-size: 0.95rem;
+    line-height: 1.45;
+  }
+
+  .theme-keywords {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin: 0.45rem 0 0.65rem 0;
+  }
+
+  .theme-keyword,
+  .people-role {
+    display: inline-block;
+    border-radius: 999px;
+    padding: 0.18rem 0.55rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    line-height: 1.2;
+    background: #e9ebef;
+    color: #4a4a4a;
+  }
+
+  .theme-index {
+    display: inline-block;
+    background: #8d2332;
+    color: #ffffff;
+    border-radius: 14px;
+    padding: 0.18rem 0.6rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  @media (max-width: 900px) {
+    .theme-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<div class="cv-wrapper">
+  {% if research.intro %}
+    <div class="research-intro">{{ research.intro }}</div>
+  {% endif %}
+
+  <div class="theme-grid">
+    {% for theme in research.themes %}
+      <div class="theme-card">
+        <div class="theme-index">Research theme {{ forloop.index }}</div>
+        <div class="theme-title">{{ theme.title }}</div>
+
+        {% if theme.keywords %}
+          <div class="theme-keywords">
+            {% for keyword in theme.keywords %}
+              <span class="theme-keyword">{{ keyword }}</span>
+            {% endfor %}
+          </div>
+        {% endif %}
+
+        {% if theme.description %}
+          <div class="theme-description">{{ theme.description }}</div>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</div>
