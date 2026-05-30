@@ -32,8 +32,8 @@ main:
    - title: "Projects"
      url: /projects/
 
-   - title: "People"
-     url: /people/
+   #- title: "People"
+     #url: /people/
 
    - title: "Opportunities"
      url: /opportunities/
