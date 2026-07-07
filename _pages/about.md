@@ -2,7 +2,7 @@
 permalink: /
 title: "Short Bio"
 author_profile: true
-layout: archive
+layout: single
 classes: wide
 redirect_from: 
   - /about/
