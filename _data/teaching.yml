@@ -1,3 +1,27 @@
+- academic_year: "2025/2026"
+  courses:
+        
+    - course: "Structural Analysis up to Collapse under Extreme Loads: Discrete-Based Modelling"
+      role: "Invited Lecturer"
+      hours: "10 hours"
+      period: "October 2026"
+      programme: "PhD course in Earthquake Engineering"
+      institution: "ROSE School, IUSS Pavia (IT)"
+
+    - course: "Structural Fire Safety Engineering"
+      role: "Lecturer"
+      hours: "60 hours"
+      period: "February – May 2026"
+      programme: "Master Degree in Safety and Civil Protection Engineering"
+      institution: "Sapienza University of Rome, Rome (IT)"
+
+    - course: "Structural Design"
+      role: "Lecturer"
+      hours: "90 hours"
+      period: "February – May 2026"
+      programme: "Bachelor & Master Degree in Environmental Engineering"
+      institution: "Sapienza University of Rome, Rome (IT)"
+      
 
 - academic_year: "2025/2026"
   courses:
